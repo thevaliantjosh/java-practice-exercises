@@ -75,7 +75,11 @@ public class HelloWorld {
         System.out.println(newGreeting.length());//.length()
         System.out.println(newGreeting.indexOf("a"));//index of the char "a"
 
+        System.out.println(newGreeting.endsWith("?"));//Returns a boolean value that could be true or false
 
+        newGreeting = newGreeting.replace("are you?", "is it going?");
+
+        System.out.println(greeting + " " + newGreeting);
 
 
     }
