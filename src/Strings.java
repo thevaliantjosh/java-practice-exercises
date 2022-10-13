@@ -137,7 +137,12 @@ public class Strings {
         String anotherPalindrome = "Niagara. O roar again!";
         char aChar = anotherPalindrome.charAt(9);
         int indexOfO = anotherPalindrome.indexOf("O");
-        System.out.printf("The string: %s%n has the character \"%c\" at the index of: %d", anotherPalindrome, aChar, indexOfO);
+        System.out.printf("The string: %s%n has the character \"%c\" at the index of: %d%n", anotherPalindrome, aChar, indexOfO);
+
+        String roar = anotherPalindrome.substring(11, 15);
+//        int indexOfR = anotherPalindrome.indexOf("r");
+
+        System.out.printf("The substring %s is from index 11 to 15, not including the blank space of 15", roar);
 
 
     }
