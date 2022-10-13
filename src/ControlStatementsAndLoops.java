@@ -14,7 +14,8 @@ public class ControlStatementsAndLoops {
         //We can create a block of code if some condition evaluates to true;
         System.out.println("How old are you?");
         byte age;
-        age = in.nextByte();
+//        age = in.nextByte();
+        age = Byte.parseByte(in.nextLine());
         if (age >= 18 && age < 75){
             System.out.println("You are an adult!");
         } else if (age >= 75){
@@ -25,8 +26,46 @@ public class ControlStatementsAndLoops {
             System.out.println("You are a tiny baby!");
         }
 
+        //Switch Statement
+
+        System.out.println("What day is it today?");
+        String day;
+        day = in.nextLine().toLowerCase();
+//        in.nextLine();
 
 
+
+
+        switch(day){
+            case "sunday" -> System.out.println("It is Sunday");
+            case "monday" -> System.out.println("It is Monday");
+            case "tuesday" -> System.out.println("It is Tuesday");
+            case "wednesday" -> System.out.println("It is Wednesday");
+            case "thursday" -> System.out.println("It is Thursday");
+            case "friday" -> System.out.println("It is Friday");
+            case "saturday" -> System.out.println("It is Saturday");
+            default -> System.out.println("That is not a day of the week");
+        }
+
+        //While loop = continually executes a block of statements whil a particular condition is true.
+
+
+        String usersName = " ";
+
+
+        while(usersName.isBlank()){
+            System.out.println("Please Enter Your name");
+            usersName = in.nextLine();
+        }
+        System.out.printf("Hello %s!%n", usersName);
+
+
+        //For loop = executes a block of code a limited amount of time
+
+        for(int i = 10; i >= 0; i--){
+            System.out.println(i);
+        }
+        System.out.println("Happy New Year!");
 
 
 //        boolean usersAge;
