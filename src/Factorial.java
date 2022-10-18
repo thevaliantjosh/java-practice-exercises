@@ -3,23 +3,26 @@ import java.util.Scanner;
 public class Factorial {
 
     public static long factorial(long number){
-
-        Scanner in = new Scanner(System.in);
-
-        long factorial = number * (number * (number - 1));
-        if(number == 1){
-            System.out.println("Please Enter a number between 1 and 10");
-            number = in.nextLong();
-            System.out.println("factorial(" + number + ") = 1");
-            return 1;
-        } else {
-            System.out.printf("The factorial of %d is: %d%n", number, factorial);
-            return number * factorial(number -1);
-
-        }
-
+            if (number <=1){
+                return 1;
+            } else {
+                return number * factorial(number -1);
+            }
 
     }
+
+    public static void callFactorial(){
+        Scanner in = new Scanner(System.in);
+        String usersInput;
+        do {
+            System.out.println("Please Enter a number between 1 and 10");
+            System.out.println(factorial(in.nextLong()));
+            in.nextLine();
+            System.out.println("Would you like to find the factorial of another number?");
+            usersInput = in.nextLine();
+        } while(usersInput.equalsIgnoreCase("y"));
+    }
+
     public static void main(String[] args) {
         //Calculate the Factorial of a number
         //A Factorial is a number multiplied by each of the numbers before it
@@ -29,6 +32,16 @@ public class Factorial {
         //5/5 = 1 ...(n-1)*n then loop until n >= n;
         //5! = 1 * 2 * 3 * 4 * 5 = 120;
 
-        factorial(5);
+        //Getting the factorial iteratively
+
+        int factorialProduct = 1;
+        for(int i=1; i <=10; i++){
+            factorialProduct = factorialProduct * i;
+        }
+        System.out.println("The factorial for 10 is: " + factorialProduct);
+        Scanner in = new Scanner(System.in);
+
+        callFactorial();
+
     }
 }
