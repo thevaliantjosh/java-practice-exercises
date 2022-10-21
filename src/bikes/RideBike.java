@@ -11,7 +11,7 @@ public class RideBike {
     }
     public static void main(String[] args) {
         Bicycle myBike = new Bicycle(60, 14, 2);
-
+        Bicycle mountainBike = new MountainBike(60, 15, 5, 2);
         bikeStatus(myBike);
         myBike.speedUp(4);
         bikeStatus(myBike);

@@ -50,7 +50,7 @@ public class Bicycle {
     public void speedUp(int increment){
         speed += increment;
         cadence += speed;
-        gear += speed/2;
+        gear++;
     }
 
 }
