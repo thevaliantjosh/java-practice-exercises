@@ -1,6 +1,9 @@
 package people;
 
 public class SignIn {
+    public static void doWork(Employee e) {
+        System.out.println(e.work());
+    }
     public static void main(String[] args) {
         Employee john = new Employee("John");
         Person jacob = new Person("Jacob");
@@ -22,8 +25,13 @@ public class SignIn {
         System.out.println(theManOfSteel.getName());
         System.out.println(theManOfSteel.getSecretIdentity());
 
-//        Employee one = new Employee();
-//        Employee two = new Employee();
+        Employee one = new Employee();
+        Manager two = new Manager();
+
+        doWork(one);
+        doWork(two);
+
+
 
 
 
